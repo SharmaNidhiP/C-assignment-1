@@ -1,77 +1,43 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-namespace CalculatorApp
+
+namespace assi1ques2
 {
-    class Program
+     class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Enter the action to be performed");
-            Console.WriteLine("Press 1 for Addition");
-            Console.WriteLine("Press 2 for Subtraction");
-            Console.WriteLine("Press 3 for Multiplication");
-            Console.WriteLine("Press 4 for Division \n");
-            int action = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Enter 1st input");
-            int input_1 = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Enter 2nd input");
-            int input_2 = Convert.ToInt32(Console.ReadLine());
-            int result = 0;
-            switch (action)
+            Console.WriteLine("enter marks obtained in  sub1");
+            int sub1 = int.Parse(Console.ReadLine());
+            Console.WriteLine("enter marks obtained in  sub2");
+            int sub2 = int.Parse(Console.ReadLine());
+            Console.WriteLine("enter marks obtained in  sub3");
+            int sub3 = int.Parse(Console.ReadLine());
+            Console.WriteLine("enter marks obtained in  sub4");
+            int sub4 = int.Parse(Console.ReadLine());
+            Console.WriteLine("enter marks obtained in  sub5");
+            int sub5 = int.Parse(Console.ReadLine());
+            int avg = ((sub1+sub2+sub3+sub4+sub5)/5);
+            Console.WriteLine("AVERAGE = "+avg);
+            if (sub1>sub2 && sub1>sub3 && sub1>sub4 && sub1>sub5)
             {
-                case 1:
-                    {
-                        result = Addition(input_1, input_2);
-                        break;
-                    }
-                case 2:
-                    {
-                        result = Subtraction(input_1, input_2);
-                        break;
-                    }
-                case 3:
-                    {
-                        result = Multiplication(input_1, input_2);
-                        break;
-                    }
-                case 4:
-                    {
-                        result = Division(input_1, input_2);
-                        break;
-                    }
-                default:
-                    Console.WriteLine("Wrong action!! try again");
-                    break;
+                Console.WriteLine("Subject 1 is the highest");
             }
-            Console.WriteLine("The result is {0}", result);
-            Console.ReadKey();
-        }
-        //Addition  
-        public static int Addition(int input_1, int input_2)
-        {
-            int result = input_1 + input_2;
-            return result;
-        }
-        //Substraction  
-        public static int Subtraction(int input_1, int input_2)
-        {
-            int result = input_1 + input_2;
-            return result;
-        }
-        //Multiplication  
-        public static int Multiplication(int input_1, int input_2)
-        {
-            int result = input_1 + input_2;
-            return result;
-        }
-        //Division  
-        public static int Division(int input_1, int input_2)
-        {
-            int result = input_1 + input_2;
-            return result;
+            else if (sub2>sub1 && sub2>sub3 && sub2>sub4 && sub2>sub5)
+            {
+                Console.WriteLine("Subject 2 is the highest");
+            }
+            else if (sub3>sub1 && sub3>sub2 && sub3>sub4 && sub3>sub5)
+            {
+                Console.WriteLine("Subject 3 is the highest");
+            }
+            else if (sub4>sub1 && sub4>sub2 && sub4>sub3 && sub4>sub5)
+            {
+                Console.WriteLine("Subject 4 is the highest");
+            }
+            else
+            {
+                Console.WriteLine("Subject 5 is the highest");
+            }
         }
     }
 }
